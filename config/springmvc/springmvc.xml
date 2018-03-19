@@ -45,6 +45,19 @@
     <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean>-->
 
     <!--
+        配置JSON转换器
+        如果配置了<mvc:annotation-driven></mvc:annotation-driven>，就不需要如下配置
+     -->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--
         使用该配置，可以代替注解映射器和注解适配器的配置
         该启动默认加载了很多参数绑定的方法，比如json的转换
         实际开发使用这种方式
